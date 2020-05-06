@@ -1,0 +1,4 @@
+1. Your simplistic callback mechanism is inapproprite for a mutli-user system. Think carefully about process ownership in a multi-process and describe the major weakness.
+The callback mechanism in this lab requires the receiving process and the callback function to be owned by the same user. Otherwise it will not work properly.
+2. We said that implmentaiton of sendblk requires one to modify receive and recvclr. However, two other operating system functions must also be modified. What are they?
+The newly added fields should either be initialized in create() function or reset in kill() function.

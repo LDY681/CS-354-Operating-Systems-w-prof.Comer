@@ -1,0 +1,6 @@
+Why are these optimization useful?
+So there will be less wasted space
+ What use cases are there that demonstrate the purpose of the optimizations?
+ When lots of multiple sizes are requires
+ What other optimizations can be made to improve the efficiency of memory allocation?
+Make several memlists so iteration can be faster.

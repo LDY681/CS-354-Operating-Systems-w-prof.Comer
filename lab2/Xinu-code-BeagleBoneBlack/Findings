@@ -1,0 +1,9 @@
+Why are the producer and consumer semaphores initialized with counts N and 0, respectively?
+Because consumer counts the items currently in the buffer, 
+producer counts the unused slots in the buffer.
+
+Suppose incrementer processes have priroity 20 each and the monitor process has priority 2000. Will the monitor run 100 times more often than an incrementer process? Explain why or why not. 
+No. sleep statement put monitor process to sleep list for 800 ms while allowing plenty time for other processes to run multiple times.
+
+Can an incrementer process ever be running when the monitor process is ready? Explain why or why not.
+When the monitor process is ready and resched happens, monitor process will be running. However, since it is put into sleep list after print, incrementer process on the readylist will start running.

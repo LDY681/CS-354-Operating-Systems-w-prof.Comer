@@ -1,0 +1,5 @@
+From my observation, type and kernelprint, which use functions putc and kprintf, prints As, Bs and Cs in different length; 
+kerneltype and print, which use functions kputc and uprintf, prints As, Bs and Cs equally. 
+These differences are caused because kputc and uprintf has interrupt mask disabled in the begining and then restored before return.
+Everytime a process is running, I decrement number of time slices by 1 and when it reaches 0, simply terminate it.
+

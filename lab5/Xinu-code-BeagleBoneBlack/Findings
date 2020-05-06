@@ -1,0 +1,5 @@
+1. Why did we choose to enlarge the size of tyebuff? What will happen if we do not enlarge it?
+Because for example, in  the case o erasing backspace, each input character may require three echo characters.
+Then it won't be able to hold enough characters. In the case of 7 characters in 20 size tyebuff, it emits the backspace but not the blank.
+2. Is there any preference for the size of tyebuff after enabling the line killing character control-u? What is the benefit of doing that?
+The size of tyebuff should be three times than input buffer. So it will hold all chracters without truncating.
